@@ -1,0 +1,201 @@
+B.Tech Final Year Project Progress & Assessment Record
+Semester VII (Odd Semester)
+Academic Session: 2026–2027
+A. Project Information
+Project Code (PQAC Assigned)
+Project Title: TICKET FLOW — SCALABLE REAL-TIME EVENT TICKET BOOKING SYSTEM
+PCS26
+1
+2
+7
+____________________________________________________________________________________________________________________________ ____________________________________________________________________________________________________________________________
+Student
+Name
+Group
+Roll No.
+Signature
+1
+Pranav Dembla
+Ccai A
+2301888021
+2
+Sachin Gautam
+Ccai A
+2301888023
+3
+4
+Project Supervisor: Mohd.Anas Khan
+B. 15-Day Progress Log
+Progress
+Week
+Milestone
+Major Work
+Completed
+Evidence
+Submitted
+Overall
+Progress %
+Superviso r Initial
+P1
+Fortnight -1
+Literature Survey
+/Synopsis Preparation
+Literature survey and synopsis preparation completed; reviewed existing ticket-booking systems.
+Synopsis / literature notes
+5%
+P2
+Fortnight -2
+Research Gap & Problem Statement
+Research gap identified and problem statement finalized.
+Problem statement + research-gap notes
+10%
+P3
+Fortnight -3
+SRS, Requirement Analysis
+SRS and requirement analysis completed.
+SRS document
+15%
+P4
+Fortnight -4
+System Design
+(UML/Architecture)
+System architecture and UML design prepared.
+Architecture diagram + UML diagrams
+20%
+P5
+Fortnight -5
+Database & Prototype
+Database design and initial prototype prepared.
+ER diagram + database schema
+25%
+P6
+Fortnight -6
+Initial Development
+Presentation
+Initial development of the core booking module started.
+GitHub repository + prototype screenshots
+30%
+C. Milestone Checklist
+Deliverable
+✓
+Date
+Remark
+Literature Review
+✓
+18-Aug-2026
+Completed
+Research Gap
+✓
+25-Aug-2026
+Identified
+Problem Statement
+✓
+27-Aug-2026
+Finalized
+Objectives
+✓
+29-Aug-2026
+Finalized
+SRS
+✓
+05-Sep-2026
+Prepared
+UML Diagrams
+✓
+12-Sep-2026
+Prepared
+Architecture
+✓
+14-Sep-2026
+Designed
+Database Design
+✓
+20-Sep-2026
+Prepared
+Prototype
+✓
+25-Sep-2026
+Initial prototype
+GitHub Repository Created
+✓
+28-Sep-2026
+Repository created
+D. Research Article Progress (Mandatory)
+Activity
+Status
+Remarks
+Topic Finalized
+Completed
+Topic finalized
+Literature Review
+Completed
+Literature reviewed
+Target Journal/Conference Identified
+Completed
+Target finalized
+Paper Outline
+In Progress
+Outline preparation ongoing
+Initial Draft
+In Progress
+Initial draft in progress
+Supervisor Review
+In Progress
+Review pending
+E. Issues / Risks Register
+Issue / Risk
+Priority
+(H/M/L)
+Mitigation
+Limited initial development time
+High
+Follow fortnight-wise development milestones.
+Concurrent booking/double-booking complexity
+High
+Compare optimistic locking and Redis-based locking.
+Performance under high traffic
+Medium
+Use k6/Artillery load testing.
+F. Supervisor Remarks
+G. Semester VII Assessment (100 Marks)
+A. Continuous Progress Monitoring (10 Marks – For Monitoring Only; Not Included in Semester VII Total)
+Criteria
+Max
+Marks
+Student 1
+(Roll No.)
+Student 2
+(Roll No.)
+Student 3
+(Roll No.)
+Student 4
+(Roll No.)
+Attendance & Review Discipline
+2
+Technical Progress
+3
+Documentation & Deliverables
+2
+Research Progress
+1
+Timely Completion
+2
+Total
+10
+B. Semester VII Review Evaluation
+Component
+Max Marks
+Student 1
+Student 2
+Student 3
+Student 4
+Review-I
+30
+Review-II
+70
+Grand Total
+120
+Date of final submission Component
+Name and Signature
+Supervisor
+PQAC Verification

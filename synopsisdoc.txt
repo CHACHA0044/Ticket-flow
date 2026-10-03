@@ -1,0 +1,142 @@
+SYNOPSIS 
+
+TICKET FLOW — SCALABLE REAL-TIME EVENT TICKET BOOKING SYSTEM
+
+
+Bachelor of Technology
+
+Computer Science & Engineering 
+
+Under Supervision of 
+
+Mohd.Anas Khan
+
+SUBMITTED BY
+
+Pranav Dembla - 2300100925
+Sachin Gautam - 2300101889
+
+
+
+INTEGRAL UNIVERSITY LUCKNOW
+
+2026-2027
+ 
+TABLE OF CONTENT
+Section	Subsection	Page No
+1. Title of the Project		1
+2. Introduction	Background	1
+	Motivation	1
+3. Problem Statement	Description of the Problem	1
+4. Objectives (Max 3)	Primary Objectives	1
+	Secondary Objectives	1
+5. Scope of the Project		1
+6. Methodology		1
+7. System Design	Architecture	2
+	Components	2
+8. Development Process	Technology Stack	2
+	AI/ML Integration (if applicable)	2
+9. Implementation Steps	Phase 1: Requirement Analysis and System Design	2
+	Phase 2: Development and Integration	2
+	Phase 3: Testing and Deployment	2
+10. Testing Methodology	Unit Testing	2
+	Integration Testing	2
+	User Acceptance Testing	2
+11. Expected Outcomes		2
+12. Deliverables	Working Prototype	3
+	Software Application	3
+	Report	3
+13. Impact	Benefits to Users	3
+	Addressing the Identified Problem	3
+14. Timeline (Graphical Project Plan / Gantt Chart)		3
+15. Project Plan		3
+16. Hardware		3
+17. Software		3
+18. Literature		3
+19. Tools and Technologies		4
+20. Additional Information		4
+ 
+
+1. Title of the Project
+Title: Ticket Flow — Scalable Real-Time Event Ticket Booking System
+2. Introduction
+Background
+Online ticket booking is used for concerts, sports events, conferences and college fests. As demand grows, these platforms need to handle many users trying to book the same limited seats at the same time. This project is in the area of backend and distributed systems, similar to platforms like BookMyShow or Ticketmaster.
+Motivation
+Popular ticket sales often crash or double-book seats because the backend cannot handle sudden bursts of traffic. This project is a chance to solve that problem properly: handling concurrent bookings correctly, keeping the app responsive under load, and updating seat availability in real time. It builds on earlier full-stack (MERN) and real-time dashboard projects, and on a hackathon-winning event management app.
+3. Problem Statement
+Description of the Problem
+When many users try to book the same seat at once, a simple system can let two people book it, or slow down badly. Basic implementations write directly to the database with no locking, read availability from the database on every request, and process everything (payment, confirmation, notification) synchronously. This causes double-booking, slow response times, and total failure under sudden traffic spikes.
+4. Objectives 
+Primary Objectives
+1.	Build a booking system where seats cannot be double-booked, even when many users try to book the same seat at the same time.
+2.	Make the system scalable and responsive under high traffic using caching, queuing and multiple server instances.
+Secondary Objectives
+3.	Show live seat availability to all users in real time using WebSockets.
+4.	Measure system performance (speed, failures) before and after adding caching, queuing and scaling.
+5. Scope of the Project
+Scope: The project covers event and seat management, a seat-selection UI, login, a concurrency-safe booking flow, real-time seat updates, a waiting queue for high-demand events, caching, and a horizontally scaled deployment.
+Included: Admin event/seat setup, booking flow, real-time updates, Redis caching and locking, queue-based waiting room, test-mode payments, Docker-based multi-instance deployment, load testing.
+Not included: Live payment gateway (test mode only), native mobile app, recommendation engine, and multi-region deployment. Scaling is shown using multiple containers behind a load balancer, not across data centres.
+6. Methodology 
+The project follows an incremental, milestone-based approach across two semesters. Semester 7 builds the core booking flow and solves the concurrency problem, first with optimistic locking, then with Redis-based locking, comparing the two. Semester 8 adds real-time updates, the waiting queue, caching, async processing and horizontal scaling. Each milestone is tested under load to check the improvement is measurable.
+7. System Design
+Architecture The frontend (Next.js/React) talks to the backend over REST for normal requests and over WebSockets for live seat updates. A load balancer (Nginx) spreads requests across multiple Node.js/Express server instances. Redis is used for caching seat availability, for locking during booking, and for broadcasting updates across server instances. MongoDB stores events, seats, bookings and users. A message queue (RabbitMQ or Redis Streams) handles confirmation, notifications and payment processing outside the main request path.
+Components
+Hardware: A regular development laptop; no special hardware is needed.
+Software: Next.js/React, Node.js/Express, Socket.io, MongoDB, Redis, RabbitMQ (or Redis Streams), Docker, Nginx, Stripe/Razorpay (test mode), k6/Artillery for load testing.
+8. Development Process
+Technology Stack
+Frontend: Next.js, React, TypeScript, Tailwind CSS. Backend: Node.js, Express. Database: MongoDB. Real-time: Socket.io. Cache/Locking: Redis. Queue: RabbitMQ/Redis Streams. Deployment: Docker, Docker Compose, Nginx. Payments: Stripe/Razorpay (test mode). Testing: Jest, k6/Artillery. Version control: Git/GitHub.
+AI/ML Integration
+Not core to this project. If time allows, a simple demand-prediction model may be added later to estimate expected traffic for an event, but this is optional.
+9. Implementation Steps
+Phase 1: Requirement Analysis and System Design
+Requirement gathering, schema design, and finalising the architecture and concurrency approach.
+Phase 2: Development and Integration
+Building the booking flow, implementing and comparing locking strategies, adding real-time updates, caching, queueing and Dockerising the services.
+Phase 3: Testing and Deployment
+Scaling across multiple instances, load testing, fixing issues, final deployment and report writing.
+10. Testing Methodology
+The system is tested using unit testing, integration testing and user acceptance testing, along with load testing for concurrency.
+Unit Testing
+Individual functions such as availability checks and booking validation are tested using Jest.
+Integration Testing
+Full flows such as select seat → lock → confirm → release → broadcast update are tested together, including concurrent requests on the same seat.
+User Acceptance Testing
+A small group of users tests the live app end-to-end. Load testing tools (k6/Artillery) simulate many concurrent users to check speed, errors and correctness under stress.
+11. Expected Outcomes
+A working ticket booking application that prevents double-booking under concurrent load, shows real-time seat availability, and stays responsive during traffic spikes. The project should also produce load-test data showing measurable improvement from each optimisation.
+12. Deliverables
+Working Prototype
+An end-to-end demo of booking, real-time updates, and the waiting queue under simulated load.
+Software Application
+A deployed, Dockerised web application with source code on GitHub.
+Report
+A report covering architecture, implementation, testing and load-test results, with diagrams and a demo video.
+13. Impact
+Benefits to Users
+Users get a faster, fairer booking experience without losing a seat to a race condition or facing a crashed site during a popular sale.
+Addressing the Identified Problem
+The project directly solves the concurrency and scaling issues described in Section 3, with measured results instead of just a working demo.
+14. Timeline (Graphical Project Plan in Tabular Format OR Gantt Chart)
+Phase / Task	S7 M1–2	S7 M3–4	S7 M5–6	S8 M1–2	S8 M3–4	S8 M5–6
+Requirement & system design	●					
+Base booking flow	●	●				
+Concurrency control (locking)		●	●			
+Real-time seat map			●	●		
+Caching + waiting room				●	●	
+Scaling + load testing					●	●
+15. Project Plan
+Semester 7: requirement analysis, system design, base booking flow, and concurrency-safe booking (locking) with benchmarking. Semester 8: real-time seat updates, caching, waiting-room queue, horizontal scaling, final load testing, and report submission.
+16. Hardware
+A laptop with at least 8 GB RAM for running Docker containers locally, and a stable internet connection. No other hardware is required.
+17. Software
+VS Code, Node.js, MongoDB (Atlas free tier), Redis, RabbitMQ/Redis Streams, Docker, Nginx, Git/GitHub, Stripe/Razorpay test accounts, k6/Artillery — all free or open-source.
+18. Literature
+Documentation on distributed locking (e.g. the Redlock algorithm), optimistic concurrency control, and publicly available system-design write-ups of large-scale booking platforms will be referenced in the final report.
+19. Tools and Technologies
+Next.js, React, Node.js, Express, MongoDB, Redis, RabbitMQ/Redis Streams, Socket.io, Docker, Nginx, Stripe/Razorpay (test mode), k6/Artillery, Git/GitHub.
+20. Additional Information
+Architecture diagrams, ER diagrams, and load-test results comparing locking strategies will be added as appendices once produced during development.
+
