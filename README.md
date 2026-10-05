@@ -34,8 +34,8 @@
 - **Institution:** Integral University, Lucknow
 - **Project Supervisor:** Mohd. Anas Khan
 - **Project Team:**
-  - **Pranav Dembla** (Roll No: `2300100925` / `2301888021`)
-  - **Sachin Gautam** (Roll No: `2300101889` / `2301888023`)
+  - **Pranav Dembla** (Enroll No/Roll No: `2300100925` / `2301888021`)
+  - **Sachin Gautam** (Enroll No/Roll No: `2300101889` / `2301888023`)
 
 ---
 
@@ -176,8 +176,8 @@ k6 run tests/load/concurrency-benchmark.js
 
 ## 👥 Contributors
 
-- **Pranav Dembla** — B.Tech CSE, Integral University (Roll No: 2300100925 / 2301888021)
-- **Sachin Gautam** — B.Tech CSE, Integral University (Roll No: 2300101889 / 2301888023)
+- **Pranav Dembla** — B.Tech CSE, Integral University (Enroll No/Roll No: 2300100925 / 2301888021)
+- **Sachin Gautam** — B.Tech CSE, Integral University (Enroll No/Roll No: 2300101889 / 2301888023)
 - **Supervised by:** Mohd. Anas Khan, Department of Computer Science & Engineering, Integral University, Lucknow
 
 ---
